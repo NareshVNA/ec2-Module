@@ -18,7 +18,7 @@ provisioner "file" {
 provisioner "remote-exec" {
     inline = [
       "chmod +x /tmp/DesiredConfig.sh",
-      "/tmp/DesiredConfig.sh args",
+      "/tmp/DesiredConfig.sh",
     ]
   }
 }
