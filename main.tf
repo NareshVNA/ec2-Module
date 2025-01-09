@@ -9,4 +9,17 @@ instance_type = "t3.medium"
 tags = {
     Name = "miniKube-VM"
 }
+
+provisioner "file" {
+    source      = "DesiredConfig.sh"
+    destination = "/tmp/DesiredConfig.sh"
+  }
+
+provisioner "remote-exec" {
+    inline = [
+      "chmod +x /tmp/DesiredConfig.sh",
+      "/tmp/DesiredConfig.sh args",
+    ]
+  }
 }
+
