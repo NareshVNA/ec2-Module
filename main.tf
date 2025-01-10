@@ -12,10 +12,6 @@ tags = {
     Name = "miniKube-VM"
 }
 
-provisioner "file" {
-  source = "./DesiredConfig.sh"
-  destination = "/tmp/DesiredConfig.sh"
-}
 user_data = file("DesiredConfig.sh")
 }
 
