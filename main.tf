@@ -30,6 +30,10 @@ resource "aws_instance" "miniKube_VM" {
     source      = "ConfigScripts"
     destination = "remoteFiles"
   }
+  provisioner "file" {
+    source      = "CDconfig.sh"
+    destination = "CDconfig.sh"
+  }
 
 }
 
