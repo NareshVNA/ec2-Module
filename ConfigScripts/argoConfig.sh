@@ -1,4 +1,3 @@
-
 echo "_______________Accessing Argo CD Services_______________"
 kubectl get svc -n argocd
 

@@ -53,14 +53,14 @@ resource "aws_vpc_security_group_ingress_rule" "miniKube_ingress" {
   to_port           = 22
 }
 
-  /* resource "aws_vpc_security_group_ingress_rule" "miniKube_ingress_2" {
+  resource "aws_vpc_security_group_ingress_rule" "miniKube_ingress_2" {
   security_group_id = aws_security_group.miniKubeSG.id
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 8080
   ip_protocol       = "tcp"
   to_port           = 8080
+  }
 
-}*/
 
 resource "aws_vpc_security_group_egress_rule" "miniKube_egress" {
   security_group_id = aws_security_group.miniKubeSG.id
