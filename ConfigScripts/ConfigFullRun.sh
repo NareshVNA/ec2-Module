@@ -1,4 +1,2 @@
-sh configDocker.sh
-sh configKubectl.sh
-sh configMinikube.sh
-sh argoCDinstall.sh
+#!/bin/bash
+configDocker.sh && configKubectl.sh && configMinikube.sh && argoCDinstall.sh
